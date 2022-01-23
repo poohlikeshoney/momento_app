@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>Give me color</button>
+  <script>
+    const colors = [
+  "#ef5777",
+  "#575fcf",
+  "#4bcffa",
+  "#34e7e4",
+  "#0be881",
+  "#f53b57",
+  "#3c40c6",
+  "#0fbcf9",
+  "#00d8d6",
+  "#05c46b",
+  "#ffc048",
+  "#ffdd59",
+  "#ff5e57",
+  "#d2dae2",
+  "#485460",
+  "#ffa801",
+  "#ffd32a",
+  "#ff3f34"
+];
+const btn = document.querySelector("button");
+const body = document.querySelector("body");
+btn.addEventListener("click", handleRandomColor);
+function handleRandomColor() {
+  const random1 = Math.floor(Math.random() * colors.length);
+  const random2 = Math.floor(Math.random() * colors.length);
+  const randomColor1 = colors[random1];
+  const randomColor2 = colors[random2];
+  console.log(randomColor1,randomColor2);
+  body.style.backgroundImage = `linear-gradient(to right, ${randomColor1}, ${randomColor2})`;
+}
+
+  </script>
+</body>
+</html>

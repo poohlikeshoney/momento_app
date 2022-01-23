@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D-day</title>
+</head>
+<body>
+  <h1>크리스마스 이브 d-day</h1>
+  <h2>0DAY 0H 0M 0S</h2>
+  <script>
+    const timer = document.querySelector('h2')
+    
+    function getDday(){
+      const today = new Date(); // 현재 시간
+      const xmasDay = new Date('2022-12-24 00:00:00').getTime();
+      const remainDay = xmasDay - today;
+
+      const day = Math.floor(remainDay / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(remainDay / (1000 * 60 * 60) % 60);
+      const minutes = Math.floor(remainDay / (1000 * 60) % 60);
+      const seconds = Math.floor((remainDay / 1000) % 60);
+
+      timer.textContent = `${day}D : ${hours}h : ${minutes}m : ${seconds}s`
+    }
+    getDday();
+    setInterval(getDday, 1000);
+  </script>
+</body>
+</html>

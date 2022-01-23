@@ -1,0 +1,17 @@
+h2 {
+  color: blue;
+}
+.clicked {
+  color: tomato;
+  transition: all 0.4s ease-in;
+}
+
+.big {
+  background: orange;
+}
+.medium {
+  background: plum;
+}
+.small {
+  background: cornflowerblue;
+}

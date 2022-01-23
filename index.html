@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momento App</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JS -->
+  <script defer src="js/greetings.js"></script>
+  <script defer src="js/clock.js"></script>
+  <script defer src="js/quote.js"></script>
+  <script defer src="js/background.js"></script>
+  <script defer src="js/todo.js"></script>
+  <script defer src="js/weather.js"></script>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <h2 id="clock">00 : 00 : 00</h2>
+
+    <form class="hidden" id="login-form">
+      <input 
+        type="text" 
+        placeholder="What's your name?"
+        required
+        maxlength = "15"  
+      >
+      <button id="loginBtn">LOGIN</button>
+    </form>
+  
+    <h1 id="greeting" class="hidden"></h1>
+  
+    <form id ="todo-form">
+      <input type="text" placeholder="Please write your TO DO LIST" required/>
+      <ul id="todo-list">
+        <!--js-->
+      </ul>
+    </form>  
+  </div><!-- container -->
+
+  <div id="weather-container">
+    <div class="city"></div>
+    <span class="weather"></span>
+    <span class="temperature"></span>
+  </div>
+  
+  <div id="quote">
+    <span class="quote"></span>
+    <span class="author"></span>
+  </div>
+</body>
+</html>
